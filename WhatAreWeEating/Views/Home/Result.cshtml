@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Результат";
+}
+
+<!-- Подключение стилей Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <h2 class="text-center">@ViewBag.Message</h2>
+
+    <h3 class="mt-4">Люди едят:</h3>
+    <ul class="list-group mt-3">
+        @foreach (var item in ViewBag.Feed)
+        {
+            <li class="list-group-item">@item</li>
+        }
+    </ul>
+</div>
+
+
